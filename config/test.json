@@ -1,0 +1,17 @@
+{
+  "application": {
+    "port": 8080
+  },
+  "mongodb": {
+    "servers": "localhost",
+    "port": 27017,
+    "dbName": "wealthdesk"
+  },
+  "auth":{
+    "public": "./vendor/key/jwtRS256.key.pub",
+    "private": "./vendor/key/jwtRS256.key"
+  },
+  "email": {
+    "credentials": "./vendor/key/93585ff4b79a.json"
+  }
+}

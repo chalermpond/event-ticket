@@ -1,0 +1,88 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body class="ticket-container">
+<div id="ticket" style="width: 667px;
+                        height: 375px;
+                        background:#000;
+                        border-radius: 30px;
+                        margin: 0 auto;
+                        font-family:Prompt;
+                        position: relative;
+                        overflow:hidden;">
+    <div style="float:right;
+                background:#f9f9f9;
+                width:75%;
+                height: 350px;
+                padding:20px 30px;
+                box-sizing:border-box">
+        <div style="text-align:right;padding-right:10px">
+            <div style="font-size:1em;">
+                {{ eventTitle }}
+            </div>
+            <div style="font-size:1em;/*! background-color: grey; */">
+                {{ eventSubtitle }}
+            </div>
+        </div>
+        <div style="margin-top:15px;font-size:0.8em;">
+            <div style="float:right;text-align:right">
+                {{ eventDate }}
+                <br>
+                {{#unless allDay}}
+                    {{ eventTimeStart }} - {{ eventTimeEnd }}
+                {{/unless}}
+
+            </div>
+            {{ eventAddress1 }}
+            <br> {{ eventAddress2 }}
+        </div>
+        <div style="margin-top:10px;">
+            <div style="float:right;margin-top:50px;">
+                <img class="img-convert" alt="QR" src="{{ ticketQr }}" style="width: 100px;">
+
+            </div>
+            <div style="font-size:1.2em;font-weight: 500;" >
+                {{ name }}<br />{{ surname }}
+            </div>
+            <div style="font-size:1em;font-weight: 300;">
+                Ticket Holder
+            </div>
+            <div style="margin-top:30px">
+                <img class="img-convert" src="{{ ticketBarcode }}" style="width: 75%;">
+            </div>
+        </div>
+    </div>
+<!--    <div style="border: 0px solid crimson;-->
+<!--                width: 300px;-->
+<!--                height: 10px;-->
+<!--                position: absolute;-->
+<!--                right: -60px;-->
+<!--                bottom: 40px;-->
+<!--                transform: rotate(325deg);-->
+<!--                background: #ff1c44;-->
+<!--                text-align: center;-->
+<!--                color: whitesmoke;-->
+<!--                padding-top: 10px;-->
+<!--                padding-bottom: 30px;-->
+<!--                font-weight: bold;-->
+<!--                display: {{ checkIn }}">-->
+<!--        ลงทะเบียนแล้ว-->
+<!--    </div>-->
+    <div style="width: 25%;
+                height: 350px;
+                box-sizing:border-box;
+                background-image:url('{{ eventTicket }}');
+                background-size:cover;
+                background-position: center;"></div>
+    <div style="color:#fff;
+                text-align:center;
+                font-size:14px;">
+        กรุณาบันทึกบัตรและนำมาแสดงภายในงาน Please keep ticket and show at event
+    </div>
+</div>
+<p style="text-align: center;"><strong>กรุณาบันทึกหน้าจอตั๋วของท่าน Please capture screen your ticket</strong></p>
+</body>
+</html>

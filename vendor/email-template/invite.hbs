@@ -1,0 +1,18 @@
+<html lang="th">
+<body>
+<p>เรียน {{name}},</p>
+<p>&nbsp;&nbsp;&nbsp; คุณได้รับคำเชิญให้เข้าร่วมงาน <strong>{{eventName}}<br/>จำนวน {{quota}}
+    ที่นั่ง<br/></strong>ณ<strong> {{location}}<br/></strong>ในวันที่ <strong>{{beginDate}} ถึง
+    {{endDate}}<br/></strong>เวลา <strong>{{startTime}}</strong> - <strong>{{endTime}} (+07:00)</strong></p>
+<p>ท่านสามารถลงทะเบียนได้โดยการสแกน QR Code หรือกดลิงก์<br/>{{url}}<br/><br/></p>
+<p>--</p>
+<p>Dear {{name}},</p>
+<p>&nbsp;&nbsp;&nbsp; You has been invited to: <strong>{{eventName}}<br/>with {{quota}} seats
+    quota<br/></strong>at<strong> {{location}}<br/></strong>on <strong>{{beginDate}} to {{endDate}}<br/></strong>event
+    start at <strong>{{startTime}}</strong> to <strong>{{endTime}} (+07:00)<br/></strong></p>
+<p>Please register by scanning QR Code or click on link below<br/>{{url}}</p>
+<p>&nbsp;</p>
+<img src="{{qrImg}}" width="200" height="200" title="qr_code" style="display:block" alt="qr_code"/>
+<p>&nbsp;</p>
+</body>
+</html>

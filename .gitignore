@@ -1,0 +1,8 @@
+dist/
+.idea/
+!(.idea/codeStyles/*)
+node_modules/
+coverage/
+*.iml
+static/
+*.log

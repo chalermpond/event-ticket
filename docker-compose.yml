@@ -1,0 +1,22 @@
+version: "2"
+services:
+  mongo:
+    image: "mongo:4"
+    user: "mongo"
+    working_dir: /home/mongo
+    volumes:
+      - /data:/data/db
+    expose:
+      - "27017"
+
+  node:
+    image: "node:8"
+    user: "node"
+    working_dir: /home/node/app
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./:/home/node/app
+    expose:
+      - "8080"
+    command: "npm run start:prod"
